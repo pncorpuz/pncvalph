@@ -45,7 +45,7 @@ namespace VipChest
                             new RequirementConfig
                             {
                                 Item = "Coins",
-                                Amount = 26973,
+                                Amount = CoinAmount.Value,
                                 Recover = false
                             },
                             new RequirementConfig
@@ -75,7 +75,7 @@ namespace VipChest
                 foreach (var piece in pieces)
                 {
                     piece.Piece.GetComponent<WearNTear>().m_health *= 9999.99f;
-                    piece.Piece.GetComponent<Container>().m_height = 2;
+                    piece.Piece.GetComponent<Container>().m_height = ChestHeight.Value;
                     PieceManager.Instance.AddPiece(piece);
                 }
 
